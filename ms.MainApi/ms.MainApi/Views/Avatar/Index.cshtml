@@ -1,0 +1,33 @@
+﻿@using (Html.BeginForm("Create", "Avatar", FormMethod.Post, new { enctype = "multipart/form-data", onsubmit = "submitFunction()" }))
+{
+
+    <div class="row" style="padding-top:20px;">
+        <div class="col-md-3">
+            <label>productId</label>
+        </div>
+        <div class="col-md-9">
+            @Html.TextBox("productId")
+        </div>
+    </div>
+    
+    <div class="row" style="padding-top:20px;">
+        <div class="col-md-3">
+            <label>avatar</label>
+        </div>
+        <div class="col-md-9">
+            <input type="file" name="avatar" accept=".jpg" /><br>
+        </div>
+    </div>
+    
+
+    <div class="text-center" style="padding-top:20px;">
+        <input class="btn btn-primary" type="submit" value="Save" />
+    </div>
+}
+
+<script type='text/javascript'>
+    var token = "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjpbIml0ZWR1Lmt6QGdtYWlsLmNvbSIsItCQ0LvQvNCw0YIg0KLQsNC20ZbRhdCw0L3SsdC70YsiXSwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZ2l2ZW5uYW1lIjoi0JDQu9C80LDRgiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL3N1cm5hbWUiOiLQotCw0LbRltGF0LDQvdKx0LvRiyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiMSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6Iml0ZWR1Lmt6QGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6WyJwcm9kdWN0U2V0dGluZ3NfZ2V0T3duIiwicHJvZHVjdFNldHRpbmdzX2dldEFsbCIsInByb2R1Y3RTZXR0aW5nc19jcmVhdGUiLCJwcm9kdWN0U2V0dGluZ3NfdXBkYXRlIiwicHJvZHVjdFNldHRpbmdzX2RlbGV0ZSIsInBlcm1pc3Npb25fZ2V0T3duIiwicGVybWlzc2lvbl9nZXRBbGwiLCJwZXJtaXNzaW9uX2NyZWF0ZSIsInBlcm1pc3Npb25fdXBkYXRlIiwicGVybWlzc2lvbl9kZWxldGUiLCJkZXNpZ25fZ2V0T3duIiwiZGVzaWduX2dldEFsbCIsImRlc2lnbl9jcmVhdGUiLCJkZXNpZ25fdXBkYXRlIiwiZGVzaWduX2RlbGV0ZSIsInVzZXJfZ2V0T3duIiwidXNlcl9nZXRBbGwiLCJ1c2VyX2NyZWF0ZSIsInVzZXJfdXBkYXRlIiwidXNlcl9kZWxldGUiLCJyb2xlX2dldE93biIsInJvbGVfZ2V0QWxsIiwicm9sZV9jcmVhdGUiLCJyb2xlX3VwZGF0ZSIsInJvbGVfZGVsZXRlIiwicHJvamVjdF9nZXRPd24iLCJwcm9qZWN0X2dldEFsbCIsInByb2plY3RfY3JlYXRlIiwicHJvamVjdF91cGRhdGUiLCJwcm9qZWN0X2RlbGV0ZSIsInByb2R1Y3RfZ2V0T3duIiwicHJvZHVjdF9nZXRBbGwiLCJwcm9kdWN0X2NyZWF0ZSIsInByb2R1Y3RfdXBkYXRlIiwicHJvZHVjdF9kZWxldGUiLCJ1c2VyUm9sZUJpbmRfZ2V0T3duIiwidXNlclJvbGVCaW5kX2dldEFsbCIsInVzZXJSb2xlQmluZF9jcmVhdGUiLCJ1c2VyUm9sZUJpbmRfdXBkYXRlIiwidXNlclJvbGVCaW5kX2RlbGV0ZSIsImNhdGFsb2dfZ2V0T3duIiwiY2F0YWxvZ19nZXRBbGwiLCJjYXRhbG9nX2NyZWF0ZSIsImNhdGFsb2dfdXBkYXRlIiwiY2F0YWxvZ19kZWxldGUiXSwibmJmIjoxNzEwMDY0NTA5LCJleHAiOjE3MTAxNTA5MDksImlzcyI6ImdyY0lkZW50aXR5U2VydmljZUNlbnRlciIsImF1ZCI6ImdyY01pY3JvU2VydmljZUFwcCJ9.wlouX0OFa6d0wRQ_U4Pd8QDHD1QgHORlpa-Jk6k2tVI";
+    xhr = new XMLHttpRequest();
+    xhr.open()
+    xhr.setRequestHeader("Authorization", "Bearer " + token);
+</script>
