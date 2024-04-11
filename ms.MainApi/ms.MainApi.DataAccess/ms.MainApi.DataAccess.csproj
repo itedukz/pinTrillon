@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\ms.MainApi.Core\ms.MainApi.Core.csproj" />
+		<ProjectReference Include="..\ms.MainApi.Entity\ms.MainApi.Entity.csproj" />
+	</ItemGroup>
+	
+</Project>
